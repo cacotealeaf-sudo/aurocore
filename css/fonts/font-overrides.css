@@ -1,0 +1,154 @@
+/**
+ * 自定義字體配置 - 快速整合版
+ * 在現有 style.css 之前引入此文件
+ */
+
+/* 引入字體定義 */
+@import url('fonts/custom-fonts.css');
+
+/* ===================================
+   覆蓋原有的 Google Fonts
+   =================================== */
+
+/* 如果你想完全使用自定義字體，可以註解掉 HTML 中的 Google Fonts */
+/* 但保留此處作為備用方案 */
+
+/* ===================================
+   主要樣式覆蓋
+   =================================== */
+
+body {
+  font-family: 'LINE Seed', 'Microsoft JhengHei', 'PingFang TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'LINE Seed', 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* 導航列 */
+.navbar {
+  font-family: 'LINE Seed', sans-serif;
+}
+
+.navbar-brand h2 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* 按鈕 */
+.btn {
+  font-family: 'LINE Seed', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 輪播標題 */
+.header-carousel h1 {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* 區段標題 */
+.text-primary {
+  font-weight: 600;
+}
+
+/* 價格/數字強調 */
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+/* Footer */
+.footer h5 {
+  font-weight: 700;
+}
+
+.footer .btn-link {
+  font-weight: 400;
+}
+
+/* 表單 */
+input,
+textarea,
+select {
+  font-family: 'LINE Seed', sans-serif;
+  font-weight: 400;
+}
+
+/* 引用區塊 */
+blockquote {
+  font-weight: 500;
+  font-style: normal; /* LINE Seed 沒有斜體，使用正常樣式 */
+}
+
+/* 特殊強調 */
+strong,
+b {
+  font-weight: 700;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-black {
+  font-weight: 800;
+}
+
+/* ===================================
+   中文排版優化
+   =================================== */
+
+/* 中文標點壓縮 */
+.zh-punctuation {
+  text-spacing: trim-both;
+}
+
+/* 避免孤立字 */
+p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 中英文混排間距 */
+.mixed-text {
+  letter-spacing: 0.05em;
+}
+
+/* 數字等寬 */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===================================
+   性能優化提示
+   =================================== */
+
+/*
+  建議在 HTML <head> 中添加：
+  
+  <link rel="preload" href="WOFF2/LINESeedTW_OTF_Rg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="WOFF2/LINESeedTW_OTF_Bd.woff2" as="font" type="font/woff2" crossorigin>
+  
+  這樣可以加快字體載入速度
+*/

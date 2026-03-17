@@ -1,0 +1,225 @@
+/**
+ * Custom Fonts - LINE Seed Font Family
+ * 自定義字體配置 - LINE Seed 字體家族
+ * 
+ * 包含多種字重和樣式，適合中文和英文混排
+ */
+
+/* ===================================
+   LINE Seed Sans (無襯線 - 英文)
+   =================================== */
+
+/* LINE Seed Sans - Regular (400) */
+@font-face {
+  font-family: 'LINE Seed Sans';
+  src: url('../WOFF2/LINESeedSans_W_Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* 優化載入，先顯示備用字體 */
+}
+
+/* LINE Seed Sans - Bold (700) */
+@font-face {
+  font-family: 'LINE Seed Sans';
+  src: url('../WOFF2/LINESeedSans_W_Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================================
+   LINE Seed TW (繁體中文)
+   =================================== */
+
+/* LINE Seed TW - Thin (100) */
+@font-face {
+  font-family: 'LINE Seed TW';
+  src: url('../WOFF2/LINESeedTW_OTF_Th.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LINE Seed TW - Regular (400) */
+@font-face {
+  font-family: 'LINE Seed TW';
+  src: url('../WOFF2/LINESeedTW_OTF_Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LINE Seed TW - Bold (700) */
+@font-face {
+  font-family: 'LINE Seed TW';
+  src: url('../WOFF2/LINESeedTW_OTF_Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LINE Seed TW - Extra Bold (800) */
+@font-face {
+  font-family: 'LINE Seed TW';
+  src: url('../WOFF2/LINESeedTW_OTF_Eb.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================================
+   統一字體家族 (推薦使用)
+   =================================== */
+
+/* 
+ * 將 LINE Seed Sans 和 LINE Seed TW 合併為單一字體家族
+ * 這樣可以用一個名稱同時支援中英文
+ */
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedTW_OTF_Th.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3000-303F; /* 中文字符範圍 */
+}
+
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedSans_W_Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-00FF; /* 英文字符範圍 */
+}
+
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedTW_OTF_Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3000-303F;
+}
+
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedSans_W_Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+00A0-00FF;
+}
+
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedTW_OTF_Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3000-303F;
+}
+
+@font-face {
+  font-family: 'LINE Seed';
+  src: url('../WOFF2/LINESeedTW_OTF_Eb.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3000-303F;
+}
+
+/* ===================================
+   全局字體設定
+   =================================== */
+
+:root {
+  /* 主要字體 */
+  --font-primary: 'LINE Seed', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* 標題字體 (稍粗) */
+  --font-heading: 'LINE Seed', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+  
+  /* 內文字體 */
+  --font-body: 'LINE Seed', 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+}
+
+/* 應用到全局 */
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 標題使用 */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* 按鈕和導航 */
+.btn,
+.navbar,
+.nav-link {
+  font-family: var(--font-primary);
+}
+
+/* ===================================
+   字重輔助類別
+   =================================== */
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal,
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/* ===================================
+   性能優化
+   =================================== */
+
+/* Preload 最常用的字體（建議在 HTML head 中使用） */
+/*
+<link rel="preload" href="WOFF2/LINESeedTW_OTF_Rg.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="WOFF2/LINESeedTW_OTF_Bd.woff2" as="font" type="font/woff2" crossorigin>
+*/
+
+/* 文字選取顏色 */
+::selection {
+  background-color: #ff4816;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #ff4816;
+  color: white;
+}
